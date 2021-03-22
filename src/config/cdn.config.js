@@ -7,7 +7,7 @@
  * @Description:
  */
 module.exports = {
-  staticUrl: {
+  cdnConfig: {
     css: [
       'https://unpkg.com/normalize.css@8.0.1/normalize.css',
       'https://unpkg.com/nprogress@0.2.0/nprogress.css',
