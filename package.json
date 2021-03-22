@@ -27,6 +27,16 @@
     "type": "git",
     "url": "git+https://github.com/dgiot/dgiot_dashboard.git"
   },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
@@ -51,6 +61,8 @@
     "zx-verify": "^0.0.2"
   },
   "devDependencies": {
+    "husky": "^5.1.3",
+    "cz-conventional-changelog": "^3.3.0",
     "@vue/cli-plugin-babel": "^4.5.11",
     "@vue/cli-plugin-eslint": "^4.5.11",
     "@vue/cli-service": "^4.5.11",
