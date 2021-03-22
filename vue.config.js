@@ -196,7 +196,7 @@ module.exports = {
       })
       config
         .plugin('banner')
-        .use(Webpack.BannerPlugin, [`${webpackBanner}${time}`])
+        .use(Webpack.BannerPlugin, [`${webpackBanner}${dateTime}`])
         .end()
       config.module
         .rule('images')
