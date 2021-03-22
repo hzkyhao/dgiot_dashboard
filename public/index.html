@@ -1,0 +1,50 @@
+<!--
+ * @Author: h7ml
+ * @Date: 2021-03-17 11:14:09
+ * @LastEditTime: 2021-03-18 16:15:31
+ * @LastEditors: h7ml
+ * @FilePath: \vue-admin-beautiful\public\index.html
+ * @Description:
+-->
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width,initial-scale=1.0" name="viewport" />
+    <link href="https://www.iotn2n.com/favicon.ico?1558342112" rel="icon" />
+    <title><%= VUE_APP_TITLE %></title>
+    <meta content="<%= VUE_APP_Keywords %>" name="keywords" />
+    <meta content="<%= VUE_APP_Description %>" name="description" />
+    <meta content="<%= VUE_APP_AUTHOR %>" name="author" />
+    <link href="<%= BASE_URL %>static/css/loading.css" rel="stylesheet" />
+    <!-- 引入样式 -->
+    <% for(var css of htmlWebpackPlugin.options.cdnConfig.css) { %>
+    <link rel="stylesheet" href="<%=css%>" />
+    <% } %>
+    <!-- 引入JS -->
+    <% for(var js of htmlWebpackPlugin.options.cdnConfig.js) { %>
+    <script charset="utf-8" src="<%=js%>"></script>
+    <% } %>
+  </head>
+
+  <body>
+    <noscript>
+      非常抱歉鉴于安全考量,您无法查看<%= VUE_APP_TITLE %>
+      源代码，该系统基于vue-admin-beautiful开发
+    </noscript>
+    <div id="vue-admin-beautiful">
+      <div class="first-loading-wrp">
+        <div class="loading-wrp">
+          <span class="dot dot-spin">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+          </span>
+        </div>
+        <h1><%= VUE_APP_TITLE %></h1>
+      </div>
+    </div>
+  </body>
+</html>
